@@ -76,7 +76,6 @@ gulp.task('increment-release', function(cb) {
     return gulp.src(['./bower.json', './package.json'])
         .pipe(bump({type: config.semverType}))
         .pipe(gulp.dest('./'))
-        .pipe(git.tag(version.latest, 'Release ' + version.latest))
 
         //gulp.src(['./deploy/content/site.txt']).pipe(replace(/(\d+\.)?(\d+\.)?(\d+.*)/, version.latest)).pipe(gulp.dest('./deploy/content'));
         // gutil.log('Version incremented to ' + gutil.colors.green(version.latest));
