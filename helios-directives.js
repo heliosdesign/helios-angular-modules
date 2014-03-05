@@ -1,6 +1,6 @@
 (function(window, angular, undefined) {'use strict';
     angular.module('heliosDirectives', ['ng'])
-        .directive('centerVideo', function() {
+        .directive('centerVideo', ['$rootScope', function($rootScope) {
             return {
                 link: function($scope, $elem, attrs) {
 
@@ -15,24 +15,14 @@
                         $elem[0].style.marginTop = -h/2 + 'px';
                     }
 
-                    setMargins($elem[0].offsetWidth, $elem[0].offsetHeight);
+                    $rootScope.$watchCollection('[windowWidth, windowHeight]', function(newVal){
+                        var styleOrder = (newVal[0]/newVal[1]) < (ratio[0]/ratio[1]) ? ['height', 'width'] : ['width', 'height'];
 
-                    var resizeTimeout;
+                        $elem[0].style[styleOrder[0]] = 100 + '%';
+                        $elem[0].style[styleOrder[1]] = 'auto';
 
-                    window.onresize = function() {
-                        if (resizeTimeout) {clearTimeout(resizeTimeout);}
-                        resizeTimeout = setTimeout(function(){
-                            var windowHeight = window.innerHeight || document.documentElement.clientHeight || document.getElementsByTagName('body')[0].clientHeight;
-                            var windowWidth = window.innerWidth || document.documentElement.clientWidth || document.getElementsByTagName('body')[0].clientWidth;
-
-                            var styleOrder = (windowWidth/windowHeight) < (ratio[0]/ratio[1]) ? ['height', 'width'] : ['width', 'height'];
-
-                            $elem[0].style[styleOrder[0]] = 100 + '%';
-                            $elem[0].style[styleOrder[1]] = 'auto';
-
-                            setMargins($elem[0].offsetWidth, $elem[0].offsetHeight);
-                        }, 500);
-                    }
+                        setMargins($elem[0].offsetWidth, $elem[0].offsetHeight);
+                    });
                 }
             }
         });
