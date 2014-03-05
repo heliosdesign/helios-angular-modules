@@ -73,15 +73,13 @@ gulp.task('prompt-increment-release', function(cb) {
 });
 
 gulp.task('increment-release', function(cb) {
-    gulp.src(['./bower.json', './package.json'])
+    return gulp.src(['./bower.json', './package.json'])
         .pipe(bump({type: config.semverType}))
         .pipe(gulp.dest('./'))
         .pipe(git.tag(version.latest, 'Release ' + version.latest))
 
         //gulp.src(['./deploy/content/site.txt']).pipe(replace(/(\d+\.)?(\d+\.)?(\d+.*)/, version.latest)).pipe(gulp.dest('./deploy/content'));
-        gutil.log('Version incremented to ' + gutil.colors.green(version.latest));
-    
-    return;
+        // gutil.log('Version incremented to ' + gutil.colors.green(version.latest));
 });
 
 gulp.task('build', function(){
