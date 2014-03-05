@@ -81,11 +81,6 @@ gulp.task('increment-release', function(cb) {
     return;
 });
 
-gulp.task('increment-complete', function() {
-    gutil.log(gutil.colors.green('Total assets size: '));
-    return;
-});
-
 gulp.task('build', function(){
     return gulp.src(['source/' + basefile])
         //.pipe(replace('%%% REPLACE %%%', content))

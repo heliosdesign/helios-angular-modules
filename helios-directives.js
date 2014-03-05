@@ -15,6 +15,10 @@
                         $elem[0].style.marginTop = -h/2 + 'px';
                     }
 
+                    setMargins($elem[0].offsetWidth, $elem[0].offsetHeight);
+
+                    var resizeTimeout;
+
                     window.onresize = function() {
                         if (resizeTimeout) {clearTimeout(resizeTimeout);}
                         resizeTimeout = setTimeout(function(){
