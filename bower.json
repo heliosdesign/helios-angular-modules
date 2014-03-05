@@ -1,0 +1,20 @@
+{
+  "name": "helios-directives",
+  "version": "2.2.1",
+  "authors": [
+    "Daniel Sundy <dan@heliozilla.com>",
+    "Helios Design Labs <hello@heliozilla.com>"
+  ],
+  "description": "Reusable directive for Helios' Angular projects.",
+  "main": "helios-directives.js",
+  "license": "MIT",
+  "homepage": "https://github.com/heliosdesign/helios-directives",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "source",
+    "gulpfile.js",
+    "package.json"
+  ]
+}
