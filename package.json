@@ -1,6 +1,6 @@
 {
   "name": "helios-directives",
-  "version": "2.2.1",
+  "version": "2.2.3",
   "description": "Reusable directive for Helios' Angular projects.",
   "author": "dan@heliozilla.com",
   "license": "BSD-2-Clause",

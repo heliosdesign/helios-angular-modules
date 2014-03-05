@@ -48,6 +48,9 @@ gulp.task('prompt-increment-release', function(cb) {
         .pipe(prompt.prompt({type: 'input', name:'increment', message: message}, function(val) {
 
             switch (val.increment) {
+                case 'a':
+                    type = 'patch';
+                    break;
                 case 'b':
                     type = 'minor';
                     break;
