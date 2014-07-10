@@ -1,6 +1,6 @@
 {
   "name": "helios-angular-modules",
-  "version": "2.5.1",
+  "version": "3.0.0",
   "description": "Reusable modules for Helios' Angular projects.",
   "author": "dan@heliozilla.com",
   "license": "BSD-2-Clause",
