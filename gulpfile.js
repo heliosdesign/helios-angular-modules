@@ -82,9 +82,10 @@ gulp.task('increment-release', function(cb) {
 });
 
 gulp.task('build', function(){
-    return gulp.src(['source/' + basefile])
+    return gulp.src(['source/**/*.js'])
         //.pipe(replace('%%% REPLACE %%%', content))
-        .pipe(rename({ basename: basename }))
+        // .pipe(gulp.dest('.'))
+        // .pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest('.'))
         .pipe(uglify({ mangle: false }))
         .pipe(rename({ suffix: '.min' }))
