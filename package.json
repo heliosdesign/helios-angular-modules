@@ -1,7 +1,7 @@
 {
-  "name": "helios-directives",
-  "version": "2.5.0",
-  "description": "Reusable directive for Helios' Angular projects.",
+  "name": "helios-angular-modules",
+  "version": "2.5.1",
+  "description": "Reusable modules for Helios' Angular projects.",
   "author": "dan@heliozilla.com",
   "license": "BSD-2-Clause",
   "devDependencies": {

@@ -1,14 +1,14 @@
 {
-  "name": "helios-directives",
-  "version": "2.5.0",
+  "name": "helios-angular-modules",
+  "version": "2.5.1",
   "authors": [
     "Daniel Sundy <dan@heliozilla.com>",
     "Helios Design Labs <hello@heliozilla.com>"
   ],
-  "description": "Reusable directive for Helios' Angular projects.",
+  "description": "Reusable modules for Helios' Angular projects.",
   "main": "helios-directives.js",
   "license": "MIT",
-  "homepage": "https://github.com/heliosdesign/helios-directives",
+  "homepage": "https://github.com/heliosdesign/helios-angular-modules",
   "ignore": [
     "**/.*",
     "node_modules",
